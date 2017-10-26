@@ -1,0 +1,144 @@
+.steps {
+  padding: 55px 20px;
+  background-color: #f3f9fa;
+  font-size: 18px;
+  line-height: 24px;
+
+  h2{
+    width: 100%;
+    margin-bottom: 25px;
+    color: #010101;
+    font-size: 36px;
+    line-height: 48px;
+    @include futura-bold;
+    text-align: center;
+
+    span{
+      display: block;
+    }
+
+  }
+
+  ul{
+    counter-reset: list 0;
+
+    li{
+      position: relative;
+      padding-top: 25px;
+
+      &:before{
+        counter-increment: list;
+        content: counter(list);
+        font-size: 16px;
+        color: #000;
+      }
+
+      a{
+        position: relative;
+        color: #07b7dd;
+
+        &:after{
+          position: absolute;
+          left: 0;
+          width: 100%;
+          bottom: 5px;
+          border-bottom: 1px dashed #07b7dd;
+          content: '';
+        }
+
+      }
+
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .steps {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .steps {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 55px calc( 50% - 491px ) 68px;
+
+    h2{
+      margin-bottom: 63px;
+    }
+
+    ul{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      li{
+        width: 23%;
+        margin-right: 5%;
+        padding-top: 55px;
+
+        &:before{
+          position: absolute;
+          top: 3px;
+          left: 0;
+        }
+
+        &:after{
+          position: absolute;
+          top: 11px;
+          left: 69px;
+          width: 111px;
+          border-bottom: 1px solid #dcdcdc;
+          content: '';
+        }
+
+        &:nth-child( 4n ){
+          margin-right: 0;
+        }
+
+      }
+
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .steps {
+
+    ul{
+
+      li{
+
+        a{
+          transition: color .3s ease;
+
+          &:after{
+            transition: border-bottom-color .3s ease;
+          }
+
+          &:hover{
+            color: #00224d;
+
+            &:after{
+              border-bottom-color: #00224d;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+}
+

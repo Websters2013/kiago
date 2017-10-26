@@ -1,0 +1,102 @@
+.members {
+  padding: 66px 20px 32px;
+  background-color: #f3f9fa;
+  font-size: 18px;
+  line-height: 24px;
+
+  h2{
+    width: 100%;
+    margin-bottom: 55px;
+    color: #010101;
+    font-size: 36px;
+    line-height: 48px;
+    @include futura-bold;
+    text-align: center;
+
+    span{
+      display: block;
+    }
+
+  }
+
+  &__item{
+    margin-bottom: 33px;
+  }
+
+  &__info{
+    margin-bottom: 27px;
+    @include futura-demi;
+    font-size: 12px;
+    line-height: 15px;
+
+    strong{
+      @include futura-bold;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+  }
+
+  &__avatar{
+    position: relative;
+    overflow: hidden;
+    width: 83px;
+    height: 83px;
+    margin-bottom: 22px;
+    border-radius: 50%;
+
+    img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      width: 100%;
+      min-height: 100%;
+    }
+
+  }
+
+  &__btn-wrap{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 52px;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .members {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .members {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 66px calc( 50% - 403px );
+
+    &__item{
+      width: 44.5%;
+      margin-right: 11%;
+
+      &:nth-child( odd ){
+        margin-right: 0;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .members {
+
+  }
+}
+
