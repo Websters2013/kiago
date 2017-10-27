@@ -78,8 +78,8 @@ gulp.task('php', function () {
 
 gulp.task('styles', function () {
     return gulp.src(paths.styles)
-        .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        //.pipe(sourcemaps.init())
+        .pipe(sass({}).on('error', sass.logError))
         .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('dist/css'))
@@ -89,9 +89,9 @@ gulp.task('styles', function () {
 gulp.task( 'scripts', function () {
     for ( var i = 0; i < paths.scripts.length; i++ ){
         gulp.src( paths.scripts[ i ].contains )
-            .pipe(sourcemaps.init())
+            //.pipe(sourcemaps.init())
             .pipe(babel({presets: ['es2015']})) //for js6
-            .pipe(uglify())
+            //.pipe(uglify())
             .pipe(concat(paths.scripts[ i ].dist))
             .pipe(sourcemaps.write())
             .pipe(gulp.dest('dist/js/'));

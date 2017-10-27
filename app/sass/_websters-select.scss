@@ -1,0 +1,119 @@
+.websters-select {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #fcfcfc 22%, #e5e5e5 81%, #e0e0e0 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%,#fcfcfc 22%,#e5e5e5 81%,#e0e0e0 100%);
+  background: linear-gradient(to bottom, #ffffff 0%,#fcfcfc 22%,#e5e5e5 81%,#e0e0e0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 );
+  font-size: 14px;
+  color: rgb(76, 76, 76);
+  line-height: 3.064;
+  @include caslon-regular();
+
+
+  &_opened {
+
+    .websters-select__arrow {
+      top: calc( 50% - 3px);
+      transform: rotate( -135deg );
+    }
+
+  }
+
+  &__arrow{
+    position: absolute;
+    top: calc( 50% - 9px );
+    right: 37px;
+    width: 11px;
+    height: 11px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    -webkit-transform: rotate( 45deg );
+    transform: rotate( 45deg );
+    -webkit-transition: transform .3s ease, top .3s ease;
+    transition: transform .3s ease, top .3s ease;
+  }
+
+  &__item {
+    width: 100%;
+    height: 40px;
+  }
+
+  &_mobile {
+
+    select {
+      position: absolute;
+      top: 0;
+      bottom: -1px;
+      left: 1px;
+      width: 100%;
+    }
+
+  }
+
+  &_custom {
+
+    select {
+      position: absolute;
+      left: -100000px;
+    }
+
+  }
+
+  &__popup {
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 3px rgba(0,0,0,.5);
+    font-size: 14px;
+    color: rgb(76, 76, 76);
+    line-height: 3.064;
+    @include caslon-regular();
+
+    ul {
+      z-index: 1;
+    }
+
+    li {
+      position: relative;
+      overflow: hidden;
+      padding: 10px 15px;
+      cursor: pointer;
+      white-space: nowrap;
+
+      &:hover,
+      &.active {
+        background: rgb(7, 183, 221);
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .websters-select {
+    height: 65px;
+    padding: 0 27px;
+    margin-bottom: 12px;
+    font-size: 16px;
+
+    &__popup {
+      font-size: 16px;
+
+      li {
+        padding: 10px 27px;
+      }
+    }
+  }
+}

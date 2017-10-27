@@ -1,0 +1,58 @@
+.get-started {
+  padding: 20px;
+  color: #fff;
+  background-color: #00224d;
+  text-align: center;
+  @include caslon-regular;
+  font-size: 12px;
+  line-height: 1.875;
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #07b7dd;
+    line-height: 36px;
+    @include futura-bold();
+
+    span {
+      display: block;
+      color: #fff;
+      @include futura-light();
+    }
+  }
+
+  p {
+    max-width: 340px;
+    margin: 0 auto 26px;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .get-started {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .get-started {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .get-started {
+    padding: 70px 45px;
+    font-size: 18px;
+    line-height: 24px;
+
+    &__title {
+      font-size: 38px;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .get-started {
+
+  }
+}
+

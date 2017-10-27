@@ -1,0 +1,51 @@
+.btn,
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  min-width: 100px;
+  padding: 10px 14px;
+  background-color: #07b7dd;
+  color: #fff!important;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  text-decoration: none!important;
+  border: 2px solid #07b7dd;
+  @include futura-demi();
+
+  &_1{
+    height: 65px;
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+  .btn,
+  a.btn {
+    padding: 10px 28px;
+
+    &_1{
+      padding: 10px 56px;
+    }
+
+    &_2{
+      padding: 10px 27px;
+    }
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .btn,
+  a.btn {
+    transition: background .3s ease-in-out;
+
+    &:hover {
+      background-color: #00224d;
+    }
+
+  }
+}
