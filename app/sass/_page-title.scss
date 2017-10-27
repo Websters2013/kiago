@@ -1,0 +1,61 @@
+.page-title {
+  padding: 38px 20px 31px;
+  color: #00224d;
+  font-size: 38px;
+  line-height: 35px;
+  @include futura-bold();
+  background-color: #fef2ec;
+  background-size: 0;
+  background-repeat: no-repeat;
+
+  span {
+    display: block;
+    @include futura-light();
+  }
+
+  img{
+    display: none;
+  }
+
+  &_partner{
+    background-color: #c6f0f5;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .article {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .page-title {
+    position: relative;
+    background-size: contain;
+    background-position: calc( 50% + 89px ) 0;
+
+    img{
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      left: calc( 50% + 161px );
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .page-title {
+
+    &__wrap{
+      max-width: 812px;
+      margin: 0 auto;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .article {
+
+  }
+}
+
